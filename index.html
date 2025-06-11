@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time-Based Greeting</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    img {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Alex Rivas</h1>
+  <p>Course: Web Applications Programming</p>
+  <p>Major: Computer Engineer</p>
+  <p>Welcome! This page changes the image depending on the current time of day.</p>
+  
+  <img id="timeImage" src="" alt="Time of day image">
+
+  <script>
+    const imageElement = document.getElementById('timeImage');
+    const hour = new Date().getHours();
+
+    if (hour >= 6 && hour < 12) {
+      imageElement.src = "https://c.pxhere.com/photos/40/a0/sunrise_sun_morgenrot_mood_sky_skies_morning_sun_clouds-487477.jpg!d"; 
+    } else if (hour >= 12 && hour < 18) {
+      imageElement.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F2107744.jpg&f=1&nofb=1&ipt=d956c46d75a7ff4c6f87f82eb10ebf7c94d4e695cd819dc30b7c7ed6e361d201"; 
+    } else {
+      imageElement.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F83995.jpg&f=1&nofb=1&ipt=c7cb3a3dd21203706a08f5200f54d0a04b24b26c5983e976c54d62e34e46a317";     
+    }
+  </script>
+</body>
+</html>
